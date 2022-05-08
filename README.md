@@ -2,6 +2,8 @@
 
 A new Flutter project.
 
+Using [Provider](https://pub.dev/packages/provider) as state manager.
+
 ## Getting Started
 
 This project is a starting point for a Flutter application.
