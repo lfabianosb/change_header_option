@@ -86,29 +86,24 @@ class HomeView extends StatelessWidget {
         child: CircularProgressIndicator(),
       );
     }
-    return Column(
-      children: [
-        Expanded(
-          child: Center(
-            child: InkWell(
-              onTap: () {
-                Navigator.push<void>(
-                  context,
-                  MaterialPageRoute<void>(
-                    builder: (BuildContext context) => const SecondPage(),
-                  ),
-                );
-              },
-              child: const Text('Page 1'),
-            ),
+    return Center(
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          ElevatedButton(
+            onPressed: () {
+              Navigator.push<void>(
+                context,
+                MaterialPageRoute<void>(
+                  builder: (BuildContext context) => const SecondPage(),
+                ),
+              );
+            },
+            child: const Text('Go to page 2'),
           ),
-        ),
-        Expanded(
-          child: Center(
-            child: Text(info.message),
-          ),
-        ),
-      ],
+          Text(info.message),
+        ],
+      ),
     );
   }
 }

@@ -85,19 +85,8 @@ class HomeView extends StatelessWidget {
         child: CircularProgressIndicator(),
       );
     }
-    return Column(
-      children: [
-        const Expanded(
-          child: Center(
-            child: Text('Page 2'),
-          ),
-        ),
-        Expanded(
-          child: Center(
-            child: Text(info.message),
-          ),
-        ),
-      ],
+    return Center(
+      child: Text(info.message),
     );
   }
 }
